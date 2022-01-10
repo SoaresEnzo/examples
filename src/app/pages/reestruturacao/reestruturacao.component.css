@@ -1,0 +1,17 @@
+button {
+  padding: 0.2rem 1rem;
+  background: var(--primary);
+  border-radius: 8px;
+  color: #fff;
+}
+
+.bg_pale_orange {
+  background-color: #ffdfbf;
+}
+
+figure {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 30px;
+  background-color: #ccc;
+}

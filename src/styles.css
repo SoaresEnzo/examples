@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary: hsl(234deg 37% 46%);
+}
+html,
+body {
+  font-family: sans-serif;
+  background-color: #f7f7f7;
+}

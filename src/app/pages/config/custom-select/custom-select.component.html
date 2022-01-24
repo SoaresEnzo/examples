@@ -1,0 +1,18 @@
+<input
+  [type]="type"
+  [placeholder]="placeholder"
+  [attr.aria-label]="ariaLabel"
+  matInput
+  [formControl]="myControl"
+  [matAutocomplete]="auto"
+  (input)="refreshOptions()"
+/>
+<mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+  <mat-option
+    *ngFor="let option of filteredOptions | async"
+    [value]="option"
+    (click)="selectValue()"
+  >
+    {{ option.name }}
+  </mat-option>
+</mat-autocomplete>

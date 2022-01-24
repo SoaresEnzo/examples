@@ -4,7 +4,7 @@ import { AccordionHeader } from './accordion-header.directive';
 import { AccordionTitle } from './accordion-title.directive';
 
 @Directive({
-  selector: 'accordion-item',
+  selector: '[accordionItem]',
 })
 export class AccordionItem {
   @Input() title = '';

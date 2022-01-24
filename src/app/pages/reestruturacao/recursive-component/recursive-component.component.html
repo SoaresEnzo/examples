@@ -1,0 +1,56 @@
+<accordion
+  [collapsing]="collapsing"
+  *ngIf="recursivo.recursao === null"
+  [openByDefault]="true"
+>
+  <accordion-item>
+    <ng-template accordionHeader let-toggle="toggle">
+      <div
+        class="d-flex bg_pale_orange align-items-center justify-content-between p-4"
+        style="margin-top: '8px'; margin-bottom: '8px'"
+      >
+        <div class="d-flex align-items-center">
+          <figure class="m-0"></figure>
+          <p class="m-0 ms-3"></p>
+        </div>
+        <div class="d-flex justify-content-between">
+          <button (click)="toggle()">Toggle</button>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template accordionContent>
+      <ng-container [ngTemplateOutlet]="content"></ng-container>
+    </ng-template>
+  </accordion-item>
+</accordion>
+
+<app-recursive-component
+  *ngIf="recursivo.recursao != null"
+  [recursivo]="recursivo.recursao"
+  [content]="nextConteudo"
+>
+</app-recursive-component>
+
+<ng-template #nextConteudo>
+  <accordion [collapsing]="collapsing" [openByDefault]="true">
+    <accordion-item>
+      <ng-template accordionHeader let-toggle="toggle">
+        <div
+          class="d-flex bg_pale_orange align-items-center justify-content-between p-4"
+          style="margin-top: '8px'; margin-bottom: '8px'"
+        >
+          <div class="d-flex align-items-center">
+            <figure class="m-0"></figure>
+            <p class="m-0 ms-3"></p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <button (click)="toggle()">Toggle</button>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template accordionContent>
+        <ng-container [ngTemplateOutlet]="content"></ng-container>
+      </ng-template>
+    </accordion-item>
+  </accordion>
+</ng-template>

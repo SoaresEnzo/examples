@@ -13,3 +13,54 @@ body {
   font-family: sans-serif;
   background-color: #f7f7f7;
 }
+
+.p-carousel-indicator button {
+  background-color: blue !important;
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 10px !important;
+}
+
+.p-carousel-indicator.p-highlight button {
+  background-color: blue !important;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 10px !important;
+}
+
+ul.p-carousel-indicators {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button.p-carousel-next {
+  border: 1px solid black;
+  color: black;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-autocomplete-panel .mat-option {
+  background-color: lightgoldenrodyellow;
+  color: black;
+}
+
+.mat-autocomplete-panel .mat-option.mat-active,
+.mat-autocomplete-panel .mat-option:hover,
+.mat-autocomplete-panel .mat-option.mat-selected:not(.mat-active):not(:hover) {
+  background-color: orange !important;
+  color: black !important;
+}
+
+input.mat-autocomplete-trigger {
+  border-right: none !important;
+  border-radius: 5px 0 0 5px !important;
+}

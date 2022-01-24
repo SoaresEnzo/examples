@@ -13,6 +13,7 @@ import {
   QueryList,
 } from '@angular/core';
 import { AccordionItem } from './directives/accordion-item.directive';
+import { OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'accordion',
@@ -36,7 +37,7 @@ import { AccordionItem } from './directives/accordion-item.directive';
     ]),
   ],
 })
-export class AccordionComponent {
+export class AccordionComponent implements AfterViewInit {
   expanded = new Set<number>();
   /**
    * Decides if the single item will be open at once or not.
@@ -56,4 +57,8 @@ export class AccordionComponent {
       this.expanded.add(index);
     }
   };
+
+  ngAfterViewInit(): void {
+    console.log(this.items);
+  }
 }

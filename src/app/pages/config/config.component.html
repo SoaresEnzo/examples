@@ -1,0 +1,7 @@
+<app-custom-select
+  [options]="[{ name: 'canais', id: 1 }]"
+  placeholder="busca"
+  ariaLabel="pesquisa de x item"
+  (selectedValue)="debug($event)"
+  (toRefreshOptions)="debug($event)"
+></app-custom-select>

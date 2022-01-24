@@ -1,0 +1,9 @@
+<p>carga works!</p>
+<mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+<h1>Styled accessible file upload</h1>
+<form [formGroup]="form" enctype="multipart/form-data">
+  <label for="fileupload" id="buttonlabel" (keydown)="debug($event, file)">
+    <span role="button" tabindex="0"> upload file </span>
+  </label>
+  <input type="file" id="fileupload" #file />
+</form>
